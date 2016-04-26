@@ -125,7 +125,7 @@ public class Viterbi {
                 NodeValue previousNode = row.get(previousTag);
                 double nodeVal = 0;
                 if (!stateTrasitionProbability.get(previousTag).containsKey(Constants.END)) {
-                    nodeVal = previousNode.value;
+                    nodeVal = previousNode.value - 100;
                 } else {
                     nodeVal = previousNode.value + Math.log10( stateTrasitionProbability.get(previousTag).get(Constants.END));
                 }
